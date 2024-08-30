@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Настройки</title>
+  <meta charset="UTF-8">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    #status {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <div id="status" class="alert alert-success" role="alert" style="display: none;"></div>
+<div class="container">
+  <h2 class="my-4">API URL Project</h2>
+  
+  <div class="form-group">
+    <label for="urlAPI">API URL:</label>
+    <input type="url" class="form-control" id="urlAPI">
+  </div>
+  
+  <button id="save" class="btn btn-primary">Сохранить</button>
+
+  <h2 class="my-4">Добавление пользователя</h2>
+  
+  <div class="form-group">
+    <label for="login">Login:</label>
+    <input type="text" class="form-control" id="login">
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password">
+  </div>
+  
+  <div class="form-group">
+    <label for="token">Наименование:</label>
+    <input type="text" class="form-control" id="token">
+  </div>
+  
+  <button id="addUser" class="btn btn-success">Добавить пользователя</button>
+
+  <h3 class="my-4">Пользователи</h3>
+  
+  <table id="userTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Login</th>
+        <th>Password</th>
+        <th>Наименование</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="scripts/jquery.slim.min.js"></script>
+<script src="scripts/popper.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+
+<script src="options.js"></script>
+</body>
+</html>
